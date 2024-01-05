@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/javascript.js" defer></script>
+  <script src="js/jsHome.js" defer></script>
+  <script src="js/gsap.min.js" dafer></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="burger">
+      <div class="bar"></div>
+    </div>
+
+    <div class="healper-shadow">
+      <div class="shadow one"></div>
+      <div class="shadow two"></div>
+    </div>
+
+    <div class="screen" id="Home">
+      <div class="main">
+        <header class="header_one">
+          <div class="header home">
+            <div class="header__home">
+              <h2 class="headerline-home">go surf</h2>
+              <div class="travel-row">
+                <div class="travel-row-low travel-row-low-1" id="North-Shore">
+                  <div class="cicle cicle1" data-info="1">
+                    <div class="info-point" id="1">
+                      <h4 class="paragraph-wave-headerline">Information :</h4>
+                      <div class="group-wave">
+                        <div class="group-wave-img">
+                          <div class="wave-img"></div>
+                          <p class="paragraph-wave">9-7</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-water"></div>
+                          <p class="paragraph-wave">+2.7</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-wind"></div>
+                          <p class="paragraph-wave">4 SE</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="cicle cicle2"></div>
+                </div>
+
+                <div class="travel-row-low travel-row-low-2" id="South-Shore">
+                  <div class="cicle cicle1 cicle-rotate" data-info="2">
+                    <div class="info-point" id="2">
+                      <h4 class="paragraph-wave-headerline">Information :</h4>
+                      <div class="group-wave">
+                        <div class="group-wave-img">
+                          <div class="wave-img"></div>
+                          <p class="paragraph-wave">8-9</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-water"></div>
+                          <p class="paragraph-wave">+4</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-wind"></div>
+                          <p class="paragraph-wave">3 NE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cicle cicle2"></div>
+                </div>
+
+                <div class="travel-row-low travel-row-low-3" id="West-Shore">
+                  <div class="cicle cicle1 cicle-rotate" data-info="3">
+                    <div class="info-point " id="3">
+                      <h4 class="paragraph-wave-headerline">Information :</h4>
+                      <div class="group-wave">
+                        <div class="group-wave-img">
+                          <div class="wave-img"></div>
+                          <p class="paragraph-wave">10-11</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-water"></div>
+                          <p class="paragraph-wave">+1.5</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-wind"></div>
+                          <p class="paragraph-wave">8 S</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cicle cicle2"></div>
+                </div>
+
+                <div class="travel-row-low travel-row-low-4" id="East-Shore">
+                  <div class="cicle cicle1" data-info="4">
+                    <div class="info-point " id="4">
+                      <h4 class="paragraph-wave-headerline">Information :</h4>
+                      <div class="group-wave">
+                        <div class="group-wave-img">
+                          <div class="wave-img"></div>
+                          <p class="paragraph-wave">4-5</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-water"></div>
+                          <p class="paragraph-wave">+4.7</p>
+                        </div>
+                        <div class="group-wave-img">
+                          <div class="wave-img-wind"></div>
+                          <p class="paragraph-wave">5 WE</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cicle cicle2"></div>
+                </div>
+
+              </div>
+              <div class="header__home-right">
+                <div class="healper-header__home-rect-text">
+                  <div class="header__home-rect">
+                    <h2 class="header__home-rect-text">surf</h2>
+                  </div>
+                  <div class="header__home-rect2">
+                    <h2 class="header__home-rect-text">Go</h2>
+                  </div>
+                </div>
+                <nav class="header__home-nav">
+                  <ul class="list-reset header__home-list">
+                    <li class="header__home-item header__home-item-1">
+                      <a class="header__home-item-link link_reset" href="">Surf</a>
+                    </li>
+                    <li class="header__home-item header__home-item-2">
+                      <a class="header__home-item-link link_reset" href="">Travel</a>
+                    </li>
+                    <li class="header__home-item header__home-item-3">
+                      <a class="header__home-item-link link_reset" href="">Sleep</a>
+                    </li>
+                  </ul>
+                </nav>
+                <time class="header__home-date">
+                  <div class="date" id="date">
+                    <div class="group-month-year" id="month-year">
+                      <h3 class="year-titel">2024</h3>
+                    </div>
+                  </div>
+                </time>
+              </div>
+
+              <div class="header__home-left">
+                <div class="header__home-hederline">
+                  <h5 class="header__headerlineH4-home">Surf</h5>
+                  <div id="headerline-home"></div>
+                  <h5 class="header__headerlineH4-home">Condition</h5>
+                  <h5 class="header__headerline">Radical</h5>
+                </div>
+                <div class="header__home-link">
+                  <nav class="header__home-nav-left">
+                    <ul class="header__home-list-left list-reset">
+                      <li class="header__home-item-left" data-li="North-Shore">
+                        <p href="" class="header__home-item-p-index">01</p>
+                        <p href="" class="header__home-item-p">North Shore</p>
+                      </li>
+                      <li class="header__home-item-left" data-li="South-Shore">
+                        <p href="" class="header__home-item-p-index">02</p>
+                        <p href="" class="header__home-item-p">South Shore</p>
+                      </li>
+                      <li class="header__home-item-left" data-li="West-Shore">
+                        <p href="" class="header__home-item-p-index">03</p>
+                        <p href="" class="header__home-item-p">West Shore</p>
+                      </li>
+                      <li class="header__home-item-left" data-li="East-Shore">
+                        <p href="" class="header__home-item-p-index">04</p>
+                        <p href="" class="header__home-item-p">East Shore</p>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="next-page">
+        <div class="container-home">
+          <h2>333</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nam quo dolorem sint ex repellat! Modi,
+            voluptatum rem ipsa itaque adipisci vel minima, quisquam quidem tenetur reiciendis non soluta quis?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="Winter">
+      <div class="main">
+        <header class="header_two">
+          <div class="header">
+            <div class="header__item">
+              <h2 class="headerline">
+                Winter
+              </h2>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempore minus
+                expedita
+                facere fugit aspernatur voluptas vero laudantium nemo animi eveniet error illo omnis doloribus nobis
+                modi ex laboriosam iste?</p>
+              <button class="btn">Read more</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="next-page">
+        <div class="2" data-x="Winter">
+          <h2>222</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nam quo dolorem sint ex repellat! Modi,
+            voluptatum rem ipsa itaque adipisci vel minima, quisquam quidem tenetur reiciendis non soluta quis?</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="screen" id="Forest">
+      <div class="main">
+        <header class="header_three">
+          <div class="header">
+            <div class="header__item">
+              <h2 class="headerline">
+                home
+              </h2>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempore minus
+                expedita
+                facere fugit aspernatur voluptas vero laudantium nemo animi eveniet error illo omnis doloribus nobis
+                modi ex laboriosam iste?</p>
+              <button class="btn">Read more</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="next-page">
+        <div class="3" data-x="Forest">
+          <h2>1111</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nam quo dolorem sint ex repellat! Modi,
+            voluptatum rem ipsa itaque adipisci vel minima, quisquam quidem tenetur reiciendis non soluta quis?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="Beach">
+      <div class="main">
+        <header class="header_four">
+          <div class="header">
+            <div class="header__item">
+              <h2 class="headerline">
+                home
+              </h2>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempore minus
+                expedita
+                facere fugit aspernatur voluptas vero laudantium nemo animi eveniet error illo omnis doloribus nobis
+                modi ex laboriosam iste?</p>
+              <button class="btn">Read more</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="next-page">
+        <div class="4" data-x="Beach">
+          <h2>444444</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nam quo dolorem sint ex repellat! Modi,
+            voluptatum rem ipsa itaque adipisci vel minima, quisquam quidem tenetur reiciendis non soluta quis?</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav__link">
+      <ul class="link__list list-reset">
+        <li class="link__list-item">
+          <a class="link__list-link" data-link="Home" href="" style="--i: .1s">Home</a>
+        </li>
+        <li class="link__list-item">
+          <a class="link__list-link" data-link="Winter" href="" style="--i: .15s">Winter</a>
+        </li>
+        <li class="link__list-item">
+          <a class="link__list-link" data-link="Forest" href="" style="--i: .2s">Forest</a>
+        </li>
+        <li class="link__list-item">
+          <a class="link__list-link" data-link="Beach" href="" style="--i: .3s">Beach</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
