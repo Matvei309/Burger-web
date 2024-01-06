@@ -282,6 +282,10 @@ header.header_four {
   transform: perspective(90vw) rotateY(20deg) translateZ(25vw) scale(0.5);
 }
 
+.mainLeave {
+  animation: leave 3s ease-out forwards;
+}
+
 
 /* key-frames */
 
@@ -304,5 +308,14 @@ header.header_four {
   to {
     transform: translateY(10px);
     opacity: 1;
+  }
+}
+
+@keyframes leave {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
