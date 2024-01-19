@@ -10,11 +10,10 @@ function EfectFunction() {
 
 }
 
-
 function findHtmlFile(dataLink) {
   const pageLink = [
-    { Home: "../html/first_page.html"},
-    { Winter: "../html/second_page.html"}
+    { Home: "index.html"},
+    { Winter: "second_page.html"}
   ]
   pageLink.forEach(item => {
     if (dataLink == Object.keys(item)) {

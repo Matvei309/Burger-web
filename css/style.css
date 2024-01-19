@@ -130,14 +130,9 @@ span {
 }
 
 /* next PAGE */
-.next-page {
-  width: 100%;
-  height: 100vh;
-}
-
-
 
 /* PEGE */
+
 
 .container {
   position: relative;
@@ -172,18 +167,6 @@ header.header_one {
   background-size: cover;
   background-position: center center;
   background-image: url(../img/Surf_The_Wave.jpg);
-}
-
-header.header_two {
-  background-color: blue;
-}
-
-header.header_three {
-  background-color: white;
-}
-
-header.header_four {
-  background-color: red;
 }
 
 .header {
@@ -236,6 +219,11 @@ header.header_four {
   z-index: 1;
   color: aquamarine;
   opacity: 0;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 
