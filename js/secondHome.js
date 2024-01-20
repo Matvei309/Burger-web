@@ -14,7 +14,7 @@ function GetForParallax() {
   })
 }
 
-function AnimationForBurger () {
+function AnimationForBurger() {
   const burger = document.querySelector('.burger-mountain');
   burger.addEventListener('click', (e) => {
     e.preventDefault()
@@ -39,7 +39,7 @@ function AnimationGsapSecond() {
       opacity: 1,
       rotate: 360,
       duration: 3,
-    scrollTrigger: {
+      scrollTrigger: {
         trigger: '.c',
         start: 'top center',
         markers: true,
@@ -49,17 +49,18 @@ function AnimationGsapSecond() {
     })
 }
 
-function HoverEfectCard() {
+function HoverEffectCard() {
+
   const card = document.querySelectorAll('.card-item-content')
 
   const listOfCard = Array.from(card)
 
   card.forEach(element => {
-    element.addEventListener('mouseenter', (e) => {
+    element.addEventListener('mouseenter', () => {
       const listOfIndex = listOfCard.findIndex(item => item === element)
-      
-      listOfCard[listOfIndex].classList.add('card-item-content-active')
-      for(let i = 1; i <= 1; i++) {
+
+      listOfCard[listOfIndex].classList.add('card-item-content-hoverMain')
+      for (let i = 1; i <= 1; i++) {
         if (listOfCard.includes(listOfCard[listOfIndex - i]) === true) {
           listOfCard[listOfIndex - i].classList.add('card-item-content-hover-left')
         }
@@ -69,21 +70,39 @@ function HoverEfectCard() {
         }
       }
     })
-    element.addEventListener('mouseleave', (e) => {
 
+    element.addEventListener('mouseleave', () => {
       listOfCard.forEach(cardItem => {
         cardItem.classList.remove('card-item-content-active')
+        cardItem.classList.remove('card-item-content-hoverMain')
         cardItem.classList.remove('card-item-content-hover-left')
         cardItem.classList.remove('card-item-content-hover-right')
       })
-
-
     })
   })
-
 }
 
-HoverEfectCard()
+function clickEffectOn() {
+  const card = document.querySelectorAll('.card-item-content')
+
+  const listOfCard = Array.from(card)
+
+  card.forEach(element => {
+    const listOfIndex = listOfCard.findIndex(item => item === element)
+    element.addEventListener('click', (e) => {
+      e.preventDefault()
+      if (listOfCard[listOfIndex].classList.contains('card-item-content-active') === false) {
+        listOfCard[listOfIndex].classList.add('card-item-content-active')
+      } else {
+        listOfCard[listOfIndex].classList.remove('card-item-content-active')
+      }
+    })
+  })
+}
+
+
+clickEffectOn()
+HoverEffectCard()
 AnimationForBurger()
 GetForParallax()
 

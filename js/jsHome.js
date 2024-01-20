@@ -149,50 +149,7 @@ function pointOnMap() {
   return openInfo()
 }
 
-function TodoElementX() {
-  function createElementCicle() {
-    let x = [
-      [],
-      [],
-      [],
-    ]
-
-    let divCicle = document.createElement('div');
-    divCicle.classList.add('cicleMap');
-
-    for (let y in x) {
-      for (let i = 0; i < 4; i++) {
-        x[y].push(divCicle)
-      }
-    }
-    return x
-  }
-
-  function todoData(key, index, counter) {
-    const container1 = document.getElementById('container-home-first');
-    const container2 = document.getElementById('container-home-second');
-    const container3 = document.getElementById('container-home-third');
-    let item = createElementCicle()
-    container1.append((item[0][index]))
-    container2.append((item[1][index]))
-    container3.append((item[2][index]))
-    console.log(item[0][index])
-    console.log(item[1][index])
-    console.log(item[2][index])
-  }
-
-  document.addEventListener('DOMContentLoaded', ()=> {
-    let item = createElementCicle()
-    for (let key in item) {
-      for (let index in item[key]) {
-        todoData(key, index)
-      }
-    }
-  })
-}
-
 AnimationGsap()
-TodoElementX()
 pointOnMap()
 mapWork()
 TogoElement()
