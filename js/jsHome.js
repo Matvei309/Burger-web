@@ -150,6 +150,7 @@ function pointOnMap() {
 }
 
 AnimationGsap()
+
 pointOnMap()
 mapWork()
 TogoElement()

@@ -3,17 +3,17 @@ function EfectFunction() {
   const main = document.querySelector('.main');
   const nextPage = document.querySelector(".next-page")
 
+
   main.classList.toggle('activeMain')
   shadow[0].classList.toggle('activeShadowOne');
   shadow[1].classList.toggle('activeShadowTwo');
   nextPage.style.display = 'none'
-
 }
 
 function findHtmlFile(dataLink) {
   const pageLink = [
-    { Home: "index.html"},
-    { Winter: "second_page.html"}
+    { Home: "index.html" },
+    { Winter: "second_page.html" }
   ]
   pageLink.forEach(item => {
     if (dataLink == Object.keys(item)) {
@@ -30,7 +30,6 @@ function changeHtmlFile() {
 
 
   linkItems.forEach(link => {
-    link.classList.toggle('linkActive')
     link.addEventListener('click', e => {
       e.preventDefault();
       main.classList.toggle('mainLeave')
@@ -41,12 +40,17 @@ function changeHtmlFile() {
 }
 
 function clickOnBurger() {
-  const burger = document.querySelector('.burger');
+  const burger = document.querySelector('.burger-mountain');
+  burger.addEventListener('mouseenter', () => {
+    burger.style.setProperty('--position-burger', `${50}%`)
+  })
 
-
+  burger.addEventListener('mouseleave', () => {
+    burger.style.setProperty('--position-burger', `${0}%`)
+  })
+  
   burger.addEventListener('click', (e) => {
     e.preventDefault()
-    burger.classList.toggle('activeBurger');
     EfectFunction()
   })
 }

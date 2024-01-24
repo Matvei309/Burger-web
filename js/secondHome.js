@@ -14,48 +14,13 @@ function GetForParallax() {
   })
 }
 
-function AnimationForBurger() {
-  const burger = document.querySelector('.burger-mountain');
-  burger.addEventListener('click', (e) => {
-    e.preventDefault()
-    // burger.addEventListener('mouseenter', () => {
-    burger.style.setProperty('--position-burger', `${50}%`)
-    // })
-    console.log('dasjbdsakjd')
-  })
-  burger.addEventListener('mouseleave', () => {
-    burger.style.setProperty('--position-burger', `${0}%`)
-  })
-
-}
-
-
-function AnimationGsapSecond() {
-  const tl = gsap.timeline();
-  gsap.fromTo('.c',
-    { opacity: 0 },
-    {
-      x: 400,
-      opacity: 1,
-      rotate: 360,
-      duration: 3,
-      scrollTrigger: {
-        trigger: '.c',
-        start: 'top center',
-        markers: true,
-        scrub: true,
-        end: 500,
-      },
-    })
-}
-
 function HoverEffectCard() {
 
   const card = document.querySelectorAll('.card-item-content')
 
   const listOfCard = Array.from(card)
 
-  card.forEach(element => {
+  listOfCard.forEach(element => {
     element.addEventListener('mouseenter', () => {
       const listOfIndex = listOfCard.findIndex(item => item === element)
 
@@ -93,16 +58,74 @@ function clickEffectOn() {
       e.preventDefault()
       if (listOfCard[listOfIndex].classList.contains('card-item-content-active') === false) {
         listOfCard[listOfIndex].classList.add('card-item-content-active')
-      } else {
+      }
+      else {
         listOfCard[listOfIndex].classList.remove('card-item-content-active')
       }
+    })
+
+  })
+}
+
+function AnimationGsapSecond() {
+  const tl = gsap.timeline();
+  tl.fromTo('.header',
+    {
+      opacity: 0,
+
+    }, {
+    opacity: 1,
+    duration: 2,
+
+  })
+
+  gsap.fromTo('.content-block__headerline',
+    {
+      opacity: 0,
+      x: -100,
+      y: 50
+    },
+    {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.content-block__headerline',
+        start: 'top bottom',
+        end: 'top center',
+        scrub: true,
+      },
+    })
+}
+
+function LogicsForSwiperEffect(grpupIndex) {
+  const buttonlist  = Array.from(document.querySelectorAll(`.btn-${grpupIndex.dataset.group}`))
+  const divList = Array.from(document.querySelectorAll(`.div-${grpupIndex.dataset.group}`))
+  let indexOFpage = 0;
+
+  buttonlist.forEach(item => {
+    item.addEventListener('click', index => {
+      index.preventDefault()
+
+      console.log(divList)
+      if (buttonlist[1] == item && indexOFpage < divList.length - 1) indexOFpage++;
+      if (buttonlist[0] == item && indexOFpage > 0) indexOFpage--;
+      divList.forEach(e => { e.style.opacity = 0 })
+      divList[indexOFpage].style.opacity = 1
     })
   })
 }
 
+function SwiperEffect() {
+  const grpupList = document.querySelectorAll('.group')
+  grpupList.forEach(grpupIndex => grpupIndex.addEventListener('mouseenter', () => LogicsForSwiperEffect(grpupIndex)))
+}
 
+
+SwiperEffect()
 clickEffectOn()
 HoverEffectCard()
-AnimationForBurger()
 GetForParallax()
+AnimationGsapSecond()
 

@@ -59,7 +59,7 @@
   z-index: 100;
   width: 100%;
   height: calc(var(--index) * 10);
-  background-image: url(../img2/ground.png);
+  background-image: url(../img2/hero-section/ground.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -84,9 +84,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  object-fit: cover;
   transition: var(--transition);
   will-change: transform;
   z-index: 1;
@@ -96,9 +94,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  object-fit: cover;
   transition: var(--transition);
   will-change: transform;
   z-index: 2;
@@ -137,7 +133,7 @@
   position: absolute;
   top: 53%;
   left: 0;
-  transform: translateY(-55%);
+  transform: translateY(-53%);
 }
 
 .headerline-content {
@@ -146,7 +142,7 @@
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  transform: translate3d(0, calc(var(--scrollTop) / -20), 0);
+  transform: translate3d(0, calc(var(--scrollTop) / 20), 0);
   transition: var(--transition);
   will-change: transform;
   text-transform: uppercase;
@@ -159,51 +155,12 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  color: #ededf5;
-}
-
-.burger-mountain {
-  position: relative;
-  justify-content: center;
-  width: 30px;
-  height: 26px;
-  overflow: hidden;
-  z-index: 10;
-  transition: 0.5s ease;
-}
-
-.row-burger {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 4px;
-  border-radius: 15px;
-  background-color: aqua;
-}
-
-.burger-mountain:after, .burger-mountain::before{
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 15px;
-  background-color: aqua;
-  transition: 0.5s ease;
-}
-
-.burger-mountain::after {
-  position: absolute;
-  top: 0%;
-  right: var(--position-burger);
-  transition: 0.5s ease;
-}
-
-.burger-mountain::before {
-  position: absolute;
-  top: 100%;
-  left: var(--position-burger);
-  transform: translateY(-100%);
+  transform: translate3d(0, calc(var(--scrollTop) / 20), 0);
+  transition: var(--transition);
+  will-change: transform;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 0 15px #4074f8;
 }
 
 .mouse-class {
@@ -233,7 +190,7 @@
   opacity: 0;
 }
 
-.next-page {
+.container-next-2 {
   position: relative;
   background-position: center center;
   background-size: cover;
@@ -282,19 +239,33 @@
   transform: translateY(-50%) translateX(-50%);
   gap: 10px;
   perspective: calc(var(--index) * 35);
+  z-index: 4;
 }
 
 .card-item-content {
   display: flex;
   width: calc(100% / 7);
+  padding: 15px 15px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale() brightness(.5) drop-shadow(16px 16px 20px #3a3a3a) ;
   transition: 0.5s opacity ease, 0.5s transform ease-out, 0.5s filter ease, 0.5s box-shadow ease, 0.5s width ease;
   will-change: transform;
+}
+
+.content-block__headerline {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  font-size: calc(var(--index) * 2.5);
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 0 15px #4074f8;
+  will-change: transform;
 
 }
+
 /* hover effect */
 .card-item-content-hoverMain {
   transform: translateZ(calc(var(--index) * 5.5));
@@ -319,4 +290,51 @@
   width: calc(100% / 7 * 4);
   transform: translateZ(calc(var(--index) * 5.5));
   filter: inherit;
+}
+
+/* ########################################################################################### */
+
+.container-next-3 {
+  position: relative;
+  height: 100vh;
+  z-index: 0;
+}
+
+.group {
+  position: relative;
+  gap: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.div-group-1, .div-group-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-group {
+  position: absolute;
+  right: auto;
+  bottom: 1%;
+  /* transform: translateX(-50%); */
+  z-index: 10;
+}
+
+.div-1 {
+  background-color: #4074f8;
+}
+
+.div-2 {
+  background-color: blue;
+}
+
+.div-3 {
+  background-color: red;
+}
+
+.div-4 {
+  background-color: green;
 }
